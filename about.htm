@@ -5,23 +5,50 @@
 </head>
 <link rel="shortcut icon" href=favi.jpg>
 <style>
-  div {margin-left: 100px;}
-  a {color: blue;}
-  a:link {text-decoration: none;}
-  a:hover {text-decoration: underline;}
-</style>
-<style type="text/css">
-  .box {
-    width:35%;
-    border-width:0px;
-  }
-</style>
-<body>
-<div>
-<h2>About Me</h2>
-<img src=me.jpg alt=“Me” width=35% height=35%>
 
-<p class="box"><span>
+body {font-family: "Times New Roman", Times, serif; font-size: 150%; }
+a {color: blue;}
+a:link {text-decoration: none;}
+a:hover {text-decoration: underline;}
+
+.sidenav {
+  color: blue;
+  padding: 6px 6px 6px 32px;
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  text-decoration: none;
+  display: block;
+}
+
+.sidenav a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  margin-left: 300px; margin-right: 200px}
+
+</style>
+
+<body>
+
+<div class="sidenav">
+  <a href=index.htm>home</a>
+  <span style="text-decoration: underline;">about</span>
+  <a href=projects.htm>projects</a>
+  <a href="https://www.flickr.com/photos/146837026@N04/albums" target="_blank">photography</a>
+</div>
+
+<div class="main">
+<p>
 I recently graduated from UC Berkeley, where I studied Design Studies and New Media. 
 I'm currently a product designer for the Realm team at <a href="https://www.mongodb.com/" target="_blank">MongoDB</a>,
 with a keen interest in user experience writing. He/Him.<br /><br />
@@ -35,9 +62,7 @@ The books I'm reading right now are <a href="https://nyupress.org/9781479830374/
 <br /><br />
 
 Feel free to reach me at kevintpham1231 at gmail dot com!
-</span></p>
 
-<p></p><p><a href=index.htm>← home</a></p>
 
 </div>
 </body>
