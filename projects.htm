@@ -1,32 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Projects</title> 
+  <title>About</title> 
 </head>
 <link rel="shortcut icon" href=favi.jpg>
 <style>
 
-br {
-  line-height: 135%;
+body {font-family: "Times New Roman", Times, serif; font-size: 150%; }
+a {color: blue;}
+a:link {text-decoration: none;}
+a:hover {text-decoration: underline;}
+
+.sidenav {
+  color: blue;
+  padding: 6px 6px 6px 32px;
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-div {
-  margin-left: 100px;
-}
-a {
-  color: blue;
-}
-a:link {
+.sidenav a {
   text-decoration: none;
+  display: block;
 }
-a:hover {
+
+.sidenav a:hover {
   text-decoration: underline;
 }
-</style>
-<body>
-<div>
-<h2>Projects</h2>
 
+.main {
+  margin-left: 300px; margin-right: 200px}
+
+</style>
+
+<body>
+
+<div class="sidenav">
+  <a href=index.htm>home</a>
+  <span style="text-decoration: underline;">about</span>
+  <a href=projects.htm>projects</a>
+  <a href="https://www.flickr.com/photos/146837026@N04/albums" target="_blank">photography</a>
+</div>
+
+<div class="main">
 <p><a href="Market_Games.pdf" target="_blank">Market Games</a><br>Gamifying the learning experience to teach real-world business skills for undergraduate students.<br><i>Fall 2018<br>Client Work</i>
 </p>
 
@@ -39,8 +60,5 @@ a:hover {
 <p></p><p><a href=index.htm>← home</a></p>
 
 </div>
-</body>
-</html>
-
 </body>
 </html>
