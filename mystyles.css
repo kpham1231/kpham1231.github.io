@@ -28,7 +28,9 @@ a:hover {color: #030303; background-color:white; text-decoration: none}
 }
 
 .sidenav a:hover {
-  color: #030303; background-color:white; text-decoration: none
+  color: #030303; 
+  background-color:white; 
+  text-decoration: none;
 }
 
 .main {
