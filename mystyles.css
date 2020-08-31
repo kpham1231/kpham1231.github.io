@@ -51,6 +51,14 @@ a:hover {text-decoration: underline; color: blue;}
   display: inline;
 }
 
+.sidenav span {
+  color: blue;
+}
+
+.sidenav_b span {
+  color: blue;
+}
+
 .main {
   margin-left: 400px; margin-right: 32px
 }
