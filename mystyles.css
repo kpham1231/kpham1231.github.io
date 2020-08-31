@@ -3,7 +3,7 @@ body {
   font-size: 160%;
 }
 
-a {color: white;}
+a {color: black;}
 a:link {text-decoration: underline;}
 a:hover {text-decoration: underline; color: blue;}
 
