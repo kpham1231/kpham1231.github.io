@@ -1,13 +1,11 @@
 body {
-  color: white;
   font-family: "Times New Roman",Times, serif;
-  font-size: 200%;
-  background-color: #030303;
+  font-size: 160%;
 }
 
 a {color: white;}
 a:link {text-decoration: underline;}
-a:hover {text-decoration: line-through;}
+a:hover {text-decoration: underline; color: blue;}
 
 .sidenav {
   padding: 6px 6px 6px 32px;
