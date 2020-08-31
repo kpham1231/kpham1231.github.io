@@ -11,8 +11,7 @@ a:link {text-decoration: underline;}
 a:hover {text-decoration: underline; color: #56ff4a;}
 
 .sidenav {
-  padding: 6px 6px 6px 32px;
-  height: 100%;
+  height: 90%;
   width: 200px;
   position: fixed;
   z-index: 1;
@@ -26,10 +25,19 @@ a:hover {text-decoration: underline; color: #56ff4a;}
   color: #56ff4a;
 }
 
-.sidenav a {
-  color: #D3D3D3;
+.sidenav a, .dropdown-btn {
+  padding: 6px 6px 6px 32px;
   text-decoration: none;
-  display: block;
+  font-size: 26px;
+  font-family: serif;
+  color: #D3D3D3;
+  display: inline;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
 }
 
 .sidenav_b {
