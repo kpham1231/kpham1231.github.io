@@ -12,7 +12,7 @@ a:hover {text-decoration: underline; color: #56ff4a;}
 
 .sidenav {
   height: 90%;
-  width: 250px;
+  width: 300px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -42,13 +42,13 @@ a:hover {text-decoration: underline; color: #56ff4a;}
 
 .dropdown-container {
   display: none;
-  padding-left: 8px;
+  padding-left: 0px;
 }
 
 .sidenav_b {
   padding: 6px 6px 6px 32px;
   height: 6%;
-  width: 200px;
+  width: 300px;
   position: fixed;
   z-index: 1;
   bottom: 0;
@@ -75,7 +75,7 @@ a:hover {text-decoration: underline; color: #56ff4a;}
 }
 
 .main {
-  margin-left: 400px; margin-right: 32px
+  margin-left: 420px; margin-right: 32px
 }
 
 .main img {
