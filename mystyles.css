@@ -38,6 +38,11 @@ a:hover {text-decoration: underline; color: blue;}
   outline: none;
 }
 
+.dropdown-container {
+  display: none;
+  padding-left: 8px;
+}
+
 .sidenav_b {
   padding: 6px 6px 6px 32px;
   height: 6%;
