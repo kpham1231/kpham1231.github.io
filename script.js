@@ -13,3 +13,8 @@ for (i = 0; i < dropdown.length; i++) {
   }
   });
 }
+
+function darkMode() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
