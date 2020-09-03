@@ -161,17 +161,17 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 
 .tooltip:hover {
   color: blue;
-  cursor: pointer;
+  cursor: help;
 }
 
 .dark-mode .tooltip:hover {
   color: #7ffc03;
-  cursor: pointer;
+  cursor: help;
 }
 
 .dark-mode a:hover .tooltiptext{
   color: white;
-  cursor: pointer;
+  cursor: help;
 }
 
 .dark-mode a:hover span{
