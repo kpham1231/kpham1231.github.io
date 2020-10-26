@@ -85,7 +85,7 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 }
 
 .dark-mode .sidenav a:hover {
-  color: #7ffc03;
+  color: #39FF14;
 }
 
 .dark-mode .dropdown-btn {
@@ -117,12 +117,12 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 }
 
 .dark-mode a:hover, .button:hover{
-  color: #7ffc03;
+  color: #39FF14;
   cursor: pointer;
 }
 
 .dark-mode .sidenav span {
-  color: #7ffc03;
+  color: #39FF14;
 }
 
 .button {
@@ -165,7 +165,7 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 }
 
 .dark-mode .tooltip:hover {
-  color: #7ffc03;
+  color: #39FF14;
   cursor: help;
 }
 
@@ -175,7 +175,7 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 }
 
 .dark-mode a:hover span{
-  color: #7ffc03;
+  color: #39FF14;
   cursor: pointer;
 }
 
