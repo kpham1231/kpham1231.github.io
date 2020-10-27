@@ -1,5 +1,5 @@
 body {
-  font-family: serif;
+  font-family: arial;
   line-height: 1.3;
   font-size: 160%;
 }
@@ -31,7 +31,7 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
   padding: 6px 6px 6px 32px;
   text-decoration: none;
   font-size: 26px;
-  font-family: serif;
+  font-family: arial;
   display: inline;
   border: none;
   background: none;
