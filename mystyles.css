@@ -51,6 +51,10 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
   padding-bottom: 5px;
 }
 
+.dropdown-btn:hover {
+  color: blue;
+}
+
 .sidenav_b {
   padding: 6px 6px 6px 32px;
   height: 6%;
@@ -122,6 +126,10 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 }
 
 .dark-mode .sidenav span {
+  color: #39FF14;
+}
+
+.dark-mode .dropdown-btn:hover {
   color: #39FF14;
 }
 
