@@ -74,7 +74,10 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
   border-top: 2px solid black;
 }
 
-.sidenav_c {margin-left: 200px; border-left: 2px solid black;}
+.sidenav_c {
+  margin-left: 200px;
+  border-left: 2px solid black;
+}
 
 .sidenav_b a:hover {
   color: blue;
@@ -83,8 +86,6 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 .sidenav_b a, .sidenav_c a {
   padding: 20px;
   text-decoration: none;
-  font-weight: bold;
-  text-align: center;
 }
 
 .sidenav span {
@@ -259,14 +260,48 @@ dfn:hover > .dfn-tooltip {
     width: 100%;
     height: auto;
     position: relative;
+    border-right: none;
+    padding-bottom: 6px
   }
   .sidenav_b {
     width: 100%;
     height: auto;
     position: relative;
-    padding-top: 40px;
+    text-align: left;
+    border-top: none;
+    padding: 32px 0px 20px 32px;
+    
   }
-  .main {margin-left: 32px; padding-top: 88px;}
+  .sidenav_c {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0;
+    text-align: left;
+    border-left: none;
+    border-top: none;
+    padding: 20px 0px 20px 32px;
+  }
+  .sidenav_b a, .sidenav_c a {
+    padding: 20px;
+    border: 2px solid black;
+  }
+  .dark-mode .sidenav {
+    border-right: none;
+  }
+
+  .dark-mode .sidenav_b, .dark-mode .sidenav_c {
+    border-top: none;
+    border-left: none;
+  }
+  .dark-mode .sidenav_b a, .dark-mode .sidenav_c a {
+    padding: 20px;
+    border: 2px solid white;
+  }
+  .main {
+    margin-left: 32px;
+    padding-top: 88px;
+  }
   dfn {text-decoration: none; cursor: auto;}
   dfn:hover {color: black;}
   dfn:hover > .dfn-tooltip {display: none; cursor: auto;}
