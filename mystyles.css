@@ -1,7 +1,8 @@
 body {
-  font-family: arial;
+  font-family: sans-serif;
   line-height: 1.3;
   font-size: 180%;
+  font-weight: 100;
 }
 
 a {color: black;}
@@ -10,14 +11,15 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 
 .sidenav {
   float:left;
-  height: 90%;
-  width: 330px;
+  height: 100%;
+  width: 400px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   overflow-x: visible;
   padding-top: 20px;
+  border-right: 2px solid black;
 }
 
 .sidenav a:hover {
@@ -31,7 +33,6 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 .sidenav a, .dropdown-btn {
   padding: 6px 6px 6px 32px;
   text-decoration: none;
-  font-family: arial;
   display: inline;
   border: none;
   background: none;
@@ -44,6 +45,8 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 .dropdown-btn {
   padding: 2px 0px 0px 32px;
   font-size: 100%;
+  font-family: sans-serif;
+  font-weight: 100;
 }
 
 .dropdown-container {
@@ -56,25 +59,32 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
   color: blue;
 }
 
-.sidenav_b {
+.sidenav_b, .sidenav_c {
   height: 6%;
-  width: 330px;
+  width: 200px;
   position: fixed;
   z-index: 1;
   bottom: 0;
   left: 0;
   overflow-x: hidden;
   padding-bottom: 10px;
+  padding-top: 18px;
+  display: inline-block;
+  text-align: center;
+  border-top: 2px solid black;
 }
+
+.sidenav_c {margin-left: 200px; border-left: 2px solid black;}
 
 .sidenav_b a:hover {
   color: blue;
 }
 
-.sidenav_b a {
-  padding: 6px 6px 6px 32px;
+.sidenav_b a, .sidenav_c a {
+  padding: 20px;
   text-decoration: none;
-  display: inline;
+  font-weight: bold;
+  text-align: center;
 }
 
 .sidenav span {
@@ -109,6 +119,8 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.6);
 }
 
+a.btn-toggle {font-family: arial;}
+
 .dark-mode {
   background-color: black;
   color: white;
@@ -125,6 +137,19 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 .dark-mode a:hover, .button:hover{
   color: #39FF14;
   cursor: pointer;
+}
+
+.dark-mode .sidenav {
+  border-right: 2px solid white;
+}
+
+.dark-mode .sidenav_b {
+  border-top: 2px solid white;
+}
+
+.dark-mode .sidenav_c {
+  border-top: 2px solid white;
+  border-left: 2px solid white;
 }
 
 .dark-mode .sidenav span {
