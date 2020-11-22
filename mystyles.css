@@ -9,6 +9,7 @@ a:link {text-decoration: underline;}
 a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 
 .sidenav {
+  float:left;
   height: 90%;
   width: 330px;
   position: fixed;
@@ -41,8 +42,8 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 }
 
 .dropdown-btn {
-  font-size: 100%;
   padding: 2px 0px 0px 32px;
+  font-size: 100%;
 }
 
 .dropdown-container {
@@ -56,7 +57,6 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 }
 
 .sidenav_b {
-  padding: 6px 6px 6px 32px;
   height: 6%;
   width: 330px;
   position: fixed;
@@ -72,6 +72,7 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 }
 
 .sidenav_b a {
+  padding: 6px 6px 6px 32px;
   text-decoration: none;
   display: inline;
 }
@@ -97,6 +98,7 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 }
 
 .main {
+  float:left;
   margin-left: 450px; margin-right: 32px
 }
 
@@ -104,7 +106,7 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
   display: block;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0px 10px 20px 0px #a1a1a1;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.6);
 }
 
 .dark-mode {
@@ -162,6 +164,7 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
   top: 105%;
   left: 80%;
 }
+  
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
@@ -192,3 +195,54 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
   border: 1px solid white;
 }
 
+dfn {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  font-style: normal;
+}
+
+dfn > .dfn-tooltip {
+  display: none;
+}
+
+dfn:hover {
+  color: blue;
+}
+
+dfn:hover > .dfn-tooltip {
+  display: block;
+  position: absolute;
+  cursor: help;
+  background: none;
+  border: none;
+  top: 105%;
+  left: 80%;
+}
+.dfn-tooltip img{
+  max-width: 480px;
+}
+
+.dark-mode dfn:hover {
+  color: #39FF14;
+}
+
+@media screen and (max-width:700px) {
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidenav_b {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-top: 40px;
+  }
+  .main {margin-left: 32px; padding-top: 88px;}
+  dfn {text-decoration: none; cursor: auto;}
+  dfn:hover {color: black;}
+  dfn:hover > .dfn-tooltip {display: none; cursor: auto;}
+}
