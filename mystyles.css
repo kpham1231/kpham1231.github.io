@@ -280,7 +280,7 @@ dfn:hover > .dfn-tooltip {
     text-align: left;
     border-left: none;
     border-top: none;
-    padding: 20px 0px 20px 32px;
+    padding: 32px 0px 20px 32px;
   }
   .sidenav_b a, .sidenav_c a {
     padding: 20px;
@@ -300,6 +300,7 @@ dfn:hover > .dfn-tooltip {
   }
   .main {
     margin-left: 32px;
+    margin-right: 32px;
     padding-top: 88px;
   }
   dfn {text-decoration: none; cursor: auto;}
