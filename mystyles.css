@@ -60,15 +60,14 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 }
 
 .sidenav_b, .sidenav_c {
-  height: 6%;
+  height: 75px;
+  line-height: 75px;
   width: 200px;
   position: fixed;
-  z-index: 1;
   bottom: 0;
   left: 0;
+  z-index: 1;
   overflow-x: hidden;
-  padding-bottom: 10px;
-  padding-top: 18px;
   display: inline-block;
   text-align: center;
   border-top: 2px solid black;
@@ -79,22 +78,14 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
   border-left: 2px solid black;
 }
 
-.sidenav_b a:hover {
-  color: blue;
-}
 
 .sidenav_b a, .sidenav_c a {
-  padding: 20px;
   text-decoration: none;
 }
 
 .sidenav_c a {font-size: 32px;}
 
-.sidenav span {
-  color: blue;
-}
-
-.sidenav_b span {
+.sidenav a span {
   color: blue;
 }
 
@@ -317,6 +308,9 @@ dfn2:hover > .dfn2-tooltip {
 
 @media screen and (max-width:1200px) {
   body  {font-size: 24px}
+  .sidenav {width:320px;} .sidenav_b {width:160px;} .sidenav_c {width:160px; margin-left: 160px;}
+  .main {margin-left: 360px;}
+  .sidenav_c a {font-size: 28px;}
 
 @media screen and (max-width:800px) {
   body  {font-size: 20px}
@@ -328,15 +322,16 @@ dfn2:hover > .dfn2-tooltip {
     padding-bottom: 6px
   }
   .sidenav_b {
+    line-height: normal;
     width: 100%;
     height: auto;
     position: relative;
     text-align: left;
     border-top: none;
-    padding: 32px 0px 20px 32px;
-    
+    padding: 24px 0px 10px 32px;
   }
   .sidenav_c {
+    line-height: normal;
     width: 100%;
     height: auto;
     position: relative;
@@ -344,16 +339,15 @@ dfn2:hover > .dfn2-tooltip {
     text-align: left;
     border-left: none;
     border-top: none;
-    padding: 32px 0px 20px 32px;
+    padding: 8px 0px 15px 32px;
   }
-  .sidenav_b a, .sidenav_c a {
-    padding: 20px;
-    border: 2px solid black;
-  }
+  .sidenav_b a {padding: 10px; border: 1px solid black;}
+  .sidenav_c a {padding: 5px 17.5px; border: 1px solid black;}
+  .sidenav_b a:hover, .sidenav_c a:hover {border: 1px solid blue;}
   .main {
     margin-left: 32px;
     margin-right: 32px;
-    padding-top: 88px;
+    padding-top: 64px;
   }
   .dark-mode .sidenav {
     border-right: none;
@@ -363,10 +357,9 @@ dfn2:hover > .dfn2-tooltip {
     border-top: none;
     border-left: none;
   }
-  .dark-mode .sidenav_b a, .dark-mode .sidenav_c a {
-    padding: 20px;
-    border: 2px solid white;
-  }
+  .dark-mode .sidenav_b a {padding: 10px; border: 1px solid white;}
+  .dark-mode .sidenav_c a {padding: 5px 17.5px; border: 1px solid white;}
+  .dark-mode .sidenav_b a:hover, .dark-mode .sidenav_c a:hover {border: 1px solid #23FE1E;}
 
   dfn {text-decoration: none; cursor: auto;}
   dfn:hover {color: black;}
