@@ -281,7 +281,7 @@ dfn2:hover > .dfn2-tooltip {
   font-size: 16px;
   font-family: sans-serif;
   font-weight: 100;
-  max-width: 360px;
+  min-width: 280px;
   background-color: white;
   border: 1px solid blue;
   text-align: left;
