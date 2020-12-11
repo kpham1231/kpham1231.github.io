@@ -1,13 +1,13 @@
 body {
   font-family: sans-serif;
   line-height: 1.3;
-  font-size: 180%;
+  font-size: 30px;
   font-weight: 100;
 }
 
 a {color: black;}
 a:link {text-decoration: underline;}
-a:hover {text-decoration: underline; color: blue; cursor: pointer;}
+a:hover {color: blue; cursor: pointer;}
 
 .sidenav {
   float:left;
@@ -22,13 +22,9 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
   border-right: 2px solid black;
 }
 
-.sidenav a:hover {
-  color: blue;
-}
+.sidenav a:hover, .sidenav a span, .dropdown-btn:hover, .button:hover {color: blue;}
 
-.dropdown-btn {
-  color: black;
-}
+.dropdown-btn {color: black;}
 
 .sidenav a, .dropdown-btn {
   padding: 6px 6px 6px 32px;
@@ -55,10 +51,6 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
   padding-bottom: 5px;
 }
 
-.dropdown-btn:hover {
-  color: blue;
-}
-
 .sidenav_b, .sidenav_c {
   height: 75px;
   line-height: 75px;
@@ -78,16 +70,9 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
   border-left: 2px solid black;
 }
 
+.sidenav_b a, .sidenav_c a {text-decoration: none;}
 
-.sidenav_b a, .sidenav_c a {
-  text-decoration: none;
-}
-
-.sidenav_c a {font-size: 32px;}
-
-.sidenav a span {
-  color: blue;
-}
+.sidenav_c a {font-size: 36px;}
 
 .main {
   float:left;
@@ -104,65 +89,19 @@ a:hover {text-decoration: underline; color: blue; cursor: pointer;}
 
 a.btn-toggle {font-family: arial;}
 
-.dark-mode {
-  background-color: black;
-  color: white;
-}
+.dark-mode {background-color: black; color: white;}
 
-.dark-mode a{
-  color: white;
-}
+.dark-mode a, .dark-mode .button, .dark-mode .sidenav a, .dark-mode .dropdown-btn {color: white;}
 
-.dark-mode .button{
-  color: white;
-}
+.dark-mode .sidenav a:hover, .dark-mode .sidenav span, .dark-mode .dropdown-btn:hover {color: #23FE1E;}
 
-.dark-mode a:hover, .button:hover{
-  color: #23FE1E;
-  cursor: pointer;
-}
+.dark-mode a:hover, .button:hover {color: #23FE1E; cursor: pointer;}
 
-.dark-mode .sidenav a {
-  color: white;
-}
+.dark-mode .sidenav, .dark-mode .sidenav_b {border-right: 2px solid white;}
 
-.dark-mode .sidenav a:hover {
-  color: #23FE1E;
-}
+.dark-mode .sidenav_b, .dark-mode .sidenav_c {border-top: 2px solid white;} .dark-mode .sidenav_c {border-left: 2px solid white;}
 
-.dark-mode .dropdown-btn {
-  color: white;
-}
-
-.dark-mode .sidenav {
-  border-right: 2px solid white;
-}
-
-.dark-mode .sidenav_b {
-  border-top: 2px solid white;
-}
-
-.dark-mode .sidenav_c {
-  border-top: 2px solid white;
-  border-left: 2px solid white;
-}
-
-.dark-mode .sidenav span {
-  color: #23FE1E;
-}
-
-.dark-mode .dropdown-btn:hover {
-  color: #23FE1E;
-}
-
-.button {
-  display: inline;
-  cursor: pointer;
-}
-
-.button:hover {
-  color: blue;
-}
+.button {display: inline; cursor: pointer;}
 
 /*----------------------------------------------------------------------------------------------------*/
 
@@ -201,7 +140,7 @@ a.btn-toggle {font-family: arial;}
   cursor: help;
 }
 
-.dark-mode a:hover .tooltiptext{
+.dark-mode a:hover .tooltiptext {
   color: white;
   cursor: help;
 }
@@ -218,47 +157,7 @@ a.btn-toggle {font-family: arial;}
 
 /*----------------------------------------------------------------------------------------------------*/
 
-dfn {
-  position: relative;
-  display: inline-block;
-  cursor: help;
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  font-style: normal;
-  z-index: 2;
-}
-
-dfn > .dfn-tooltip {
-  display: none;
-}
-
-dfn:hover {
-  color: blue;
-}
-
-dfn:hover > .dfn-tooltip {
-  display: block;
-  position: absolute;
-  cursor: help;
-  background: none;
-  border: none;
-  right: 110%;
-  top: 110%;
-}
-.dfn-tooltip img{
-  max-width: 400px;
-  background: none;
-  border: 1px solid blue;
-  box-shadow: 0px 10px 20px 0px rgba(0, 0, 255, 0.6);
-}
-
-.dark-mode dfn:hover {color: #23FE1E;}
-
-.dark-mode .dfn-tooltip img {border: 1px solid #23FE1E; box-shadow: 0px 10px 20px 0px rgba(35, 254, 30, 0.6);}
-
-/*----------------------------------------------------------------------------------------------------*/
-
-dfn2 {
+dfn, dfn2 {
   position: relative;
   display: inline-block;
   cursor: help;
@@ -267,41 +166,54 @@ dfn2 {
   font-style: normal;
 }
 
-dfn2 > .dfn2-tooltip {
-  display: none;
-}
+dfn > .dfn-tooltip, dfn2 > .dfn2-tooltip {display: none;}
 
-dfn2:hover {
-  color: blue;
-}
+dfn:hover, dfn2:hover {color: blue;}
 
-dfn2:hover > .dfn2-tooltip {
+dfn:hover > .dfn-tooltip, dfn2:hover > .dfn2-tooltip {
   display: block;
   position: absolute;
   font-size: 16px;
   font-family: sans-serif;
   font-weight: 100;
-  min-width: 280px;
-  background-color: white;
-  border: 1px solid blue;
   text-align: left;
-  padding: 12px 16px 12px 16px;
-  position: absolute;
-  top: 102%;
-  right: 20%;
   z-index: 1;
+}
+
+dfn:hover > .dfn-tooltip {
+  background: none;
+  border: none;
+  right: 110%;
+  top: 110%;
+}
+
+dfn2:hover > .dfn2-tooltip {
+  background: white;
+  padding: 12px 16px 12px 16px;
+  top: 102%; right: 20%;
+  min-width: 280px;
+}
+
+.dfn-tooltip img {
+  max-width: 400px;
+  background: none;
+}
+
+dfn2:hover > .dfn2-tooltip, .dfn-tooltip img {
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 255, 0.6);
+  border: 1px solid blue;
 }
 
-.dark-mode dfn2:hover {
-  color: #23FE1E;
-}
+.dark-mode dfn:hover, .dark-mode dfn2:hover {color: #23FE1E;}
 
-.dark-mode dfn2:hover > .dfn2-tooltip {
+.dark-mode dfn:hover > .dfn-tooltip, .dark-mode dfn2:hover > .dfn2-tooltip {
   color: white;
   background-color: black;
-  border: 1px solid #23FE1E;
+}
+
+.dark-mode dfn2:hover > .dfn2-tooltip, .dark-mode .dfn-tooltip img {
   box-shadow: 0px 10px 20px 0px rgba(35, 254, 30, 0.6);
+  border: 1px solid #23FE1E;
 }
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -314,49 +226,35 @@ dfn2:hover > .dfn2-tooltip {
 
 @media screen and (max-width:800px) {
   body  {font-size: 20px}
+
   .sidenav {
     width: 100%;
     height: auto;
     position: relative;
     border-right: none;
-    padding-bottom: 6px
-  }
-  .sidenav_b {
+    padding-bottom: 6px}
+
+  .sidenav_b, .sidenav_c {
     line-height: normal;
     width: 100%;
     height: auto;
     position: relative;
     text-align: left;
-    border-top: none;
-    padding: 24px 0px 10px 32px;
-  }
-  .sidenav_c {
-    line-height: normal;
-    width: 100%;
-    height: auto;
-    position: relative;
-    margin: 0;
-    text-align: left;
-    border-left: none;
-    border-top: none;
-    padding: 8px 0px 15px 32px;
-  }
+    border-top: none;}
+
+  .sidenav_b {padding: 24px 0px 10px 32px;}
   .sidenav_b a {padding: 10px; border: 1px solid black;}
+  .sidenav_c {margin: 0; border-left: none; padding: 8px 0px 15px 32px;} 
   .sidenav_c a {padding: 5px 17.5px; border: 1px solid black;}
   .sidenav_b a:hover, .sidenav_c a:hover {border: 1px solid blue;}
+  
   .main {
     margin-left: 32px;
     margin-right: 32px;
-    padding-top: 64px;
-  }
-  .dark-mode .sidenav {
-    border-right: none;
-  }
+    padding-top: 64px;}
 
-  .dark-mode .sidenav_b, .dark-mode .sidenav_c {
-    border-top: none;
-    border-left: none;
-  }
+  .dark-mode .sidenav {border-right: none;}
+  .dark-mode .sidenav_b, .dark-mode .sidenav_c {border-top: none; border-left: none;}
   .dark-mode .sidenav_b a {padding: 10px; border: 1px solid white;}
   .dark-mode .sidenav_c a {padding: 5px 17.5px; border: 1px solid white;}
   .dark-mode .sidenav_b a:hover, .dark-mode .sidenav_c a:hover {border: 1px solid #23FE1E;}
