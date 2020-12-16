@@ -5,7 +5,7 @@
 
 body {
   font-family: 'Grenze', serif;
-  line-height: 1.25;
+  line-height: 1.1;
   font-size: 32px;
   font-weight: 200;
   background-color: white;
@@ -221,7 +221,9 @@ sub {
 
 /*----------------------------------------------------------------------------------------------------*/
 
-.dark-mode, .dark-mode a, .dark-mode .button {background-color: black; color: white;}
+.dark-mode {background-color: black; color: white;}
+
+.dark-mode a, .dark-mode .button {color: white;}
 
 .dark-mode #topnav {background-color: black; color: white; border-bottom: 2px solid white}
 
