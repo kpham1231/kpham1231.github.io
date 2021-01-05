@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Grenze:wght@200;300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
 
 body {
-  font-family: 'Grenze', serif;
-  line-height: 1.1;
-  font-size: 32px;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.25;
+  font-size: 24px;
   font-weight: 200;
   background-color: white;
 }
 
-.projbody {font-family: 'Open Sans', sans-serif; font-weight:300; font-size:20px; line-height: 1.3;}
+.projbody {font-family: 'Nanum Myeongjo', serif; font-weight:300; font-size:18px; line-height: 1.25;}
 
 a {color: black; text-decoration: underline;}
 a:hover {color: blue; cursor: pointer;}
@@ -73,10 +73,10 @@ a:hover {color: blue; cursor: pointer;}
   border-left: 2px solid black;
 }
 
-.sidenav_b a, .sidenav_c a {text-decoration: none;}
+.sidenav_b a {text-decoration: none; font-size: 32px}
+.sidenav_c a {text-decoration: none; font-size: 40px}
 
 .main {
-  font-size: 40px;
   float:left;
   margin: 48px 32px 0px 394px;
   padding-left: 50px;
@@ -84,10 +84,9 @@ a:hover {color: blue; cursor: pointer;}
   border-left: 2px solid black;
 }
 
-.main hr {
-  margin-left: -50px; margin-right: -40px;
-  border-top: 2px dotted;
-}
+.main hr.full {margin-left: -50px; margin-right: -40px;}
+
+.main hr.dashed {border-style: none; border-top: 1px dashed black;}
 
 .main img {
   display: block;
@@ -98,7 +97,8 @@ a:hover {color: blue; cursor: pointer;}
 sup, sub {
   vertical-align: baseline;
   position: relative;
-  top: -0.4em;
+  top: -0.5em;
+  left: .05em;
   font-size: 70%;
   text-decoration:none;
 }
@@ -110,22 +110,28 @@ sub {
 /*----------------------------------------------------------------------------------------------------*/
 
 .thumbnail {
-  font-family: 'Grenze', serif;
-  line-height: 1.1;
-  font-size: 40px;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.25;
+  font-size: 12px;
   font-weight: 200;
-  background-color: white;
-  border:none; padding:0px;
-  text-decoration:underline;
-  text-decoration-style: dotted;
+  color: blue;
+  background-color: rgba(0, 0, 255, .1);
+  border: white;
+  padding: 0px;
   display: inline;
   outline:none;
+  text-decoration: none;
+  display: relative;
+  border-radius: 25px;
+  padding: 1px 5px 1px 5px;
 }
 
-.thumbnail:hover, .thumbnail:hover span li a {
-  color: blue;
+.thumbnail:hover{
+  text-decoration: none;
   cursor: help;
 }
+
+.thumbnail:hover span li a {color: blue;}
 
 /*This hide the image that is in the span*/
 .thumbnail span{ 
@@ -154,31 +160,38 @@ sub {
 
   color: blue;
   font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Arial', sans-serif;
   font-weight: 300;
   line-height: 1.1;
   text-align: left;
 }
 
 .sidenav .thumbnail {
-  color: blue;
-  font-size: 24px;
+  font-size: 18px;
   float:left;
   margin: 136px 394px 0px -56px;
   z-index:-200;
   position: fixed;
   transform: rotate(-90deg);
+  color: white;
+  background-color: blue;
+  border-radius: 0px;
 }
 
 .sidenav .thumbnail:hover span {
   transform: rotate(90deg);
-  top:52px;
-  left: -172px;
+  top:50px;
+  left: -180px;
 }
 
 .thumbnail:hover span img {
   width:100%;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 255, 0.6);
+}
+
+.projbody .thumbnail {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 10px;
 }
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -221,23 +234,21 @@ sub {
 
 /*----------------------------------------------------------------------------------------------------*/
 
-.dark-mode {background-color: black; color: white;}
-
-.dark-mode a, .dark-mode .button {color: white;}
+.dark-mode, .dark-mode a, .dark-mode .button {background-color: black; color: white;}
 
 .dark-mode #topnav {background-color: black; color: white; border-bottom: 2px solid white}
 
 .dark-mode .main {border-left: 2px solid white;}
 
-.dark-mode .thumbnail {color:white;background-color: black;}
+.dark-mode .thumbnail {color:white; background-color: rgba(35, 254, 30, .25);}
 
-.dark-mode .sidenav, .dark-mode .sidenav .thumbnail, .dark-mode #topnav li a span, .dark-mode .thumbnail:hover, .dark-mode .thumbnail:hover span, .dark-mode .thumbnail:hover span li a {color: #23FE1E;}
+.dark-mode .sidenav, .dark-mode #topnav li a span, .dark-mode .thumbnail, .dark-mode .thumbnail:hover, .dark-mode .thumbnail:hover span, .dark-mode .thumbnail:hover span li a, .dark-mode a:hover, .button:hover {color: #23FE1E;}
 
-.dark-mode a:hover, .button:hover {color: #23FE1E;}
+.dark-mode .sidenav .thumbnail {color: black; background-color: #23FE1E}
 
-.dark-mode .sidenav_b {border-right: 2px solid white;}
+.dark-mode .sidenav_b {border-right: 2px solid white; border-top: 2px solid white;}
 
-.dark-mode .sidenav_b, .dark-mode .sidenav_c {border-top: 2px solid white;} .dark-mode .sidenav_c {border-left: 2px solid white;}
+.dark-mode .sidenav_c {border-left: 2px solid white; border-top: 2px solid white;}
 
 .dark-mode .thumbnail:hover span img {box-shadow: 0px 10px 20px 0px rgba(35, 254, 30, 0.6);}
 
@@ -246,11 +257,12 @@ sub {
 /*----------------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width:1200px) {
-  body, .dropdown-btn, .main, .thumbnail {font-size: 24px}
+  body, .dropdown-btn, .main {font-size: 18px}
   .sidenav {width:320px;} .sidenav_b {width:160px;} .sidenav_c {width:160px; margin-left: 160px;} #topnav li a {padding:16px 0px; 0px 0px}
-  .main {margin-left: 314px;} .main hr {margin-left:-46px}
-  .sidenav_c a {font-size: 28px;}
-  .thumbnail:hover span {width: 220px; left:64px; font-size:16px} .sidenav .thumbnail:hover span {top:0px; left: -140px;}
+  .main {margin-left: 314px;}
+  .sidenav_c a {font-size: 40px;}
+  .thumbnail:hover span {width: 220px; left:64px; font-size:16px} .sidenav .thumbnail:hover span {top:5px; left: -140px;}
+}
 
 @media screen and (max-width:880px) {
   #topnav {
@@ -297,16 +309,16 @@ sub {
     margin: 0px 32px;
     padding: 16px 0px;
     border-left: none;
-    border-top: 1px dotted black;
+    border-top: 1px solid black;
   }
 
-  .main hr {border-style: none;}
+  .main hr {display: none;}
 
-  .thumbnail {text-decoration: none; cursor: auto;}
-  .thumbnail:hover {color: black; cursor: auto;}
+  .thumbnail {text-decoration: none; cursor: auto}
   .thumbnail:hover span, .thumbnail:hover span img {display: none; cursor: auto;}
 
-  .dark-mode #topnav {border-bottom: none} .dark-mode .main {border-left: none; border-top: 1px dotted white;}
+  .dark-mode #topnav {border-bottom: none}
+  .dark-mode .main {border-left: none; border-top: 1px solid white;}
   .dark-mode .sidenav_b, .dark-mode .sidenav_c {border-top: none; border-left: none;}
   .dark-mode .sidenav_b a, .dark-mode .sidenav_c a {padding: 5px 10px; border: 1px solid white;}
   .dark-mode .sidenav_b a:hover, .dark-mode .sidenav_c a:hover {border: 1px solid #23FE1E;}
