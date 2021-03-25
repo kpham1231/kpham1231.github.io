@@ -24,25 +24,25 @@ a:hover {color: blue; cursor: pointer;}
   top: 0;
   left: 0;
   width: 100%;
-  float: left;
   margin: 0;
   padding: 0px;
   list-style: none;
   border-bottom: 2px solid black;
   z-index: 2;
+  text-align: center;
 }
 
 #topnav li {
-  float: left;
-  width:16.6666666667%;
-  text-align:center;
-  padding:none;
-  margin: none;
+  display: inline;
+  width: 25%;
+  text-align: center;
+  padding: none;
+  margin: 7%;
 }
 
 #topnav li a {
-  display: block;
   padding: 16px 0px;
+  display: inline-block;
 }
 
 #topnav li a span {color: blue;}
@@ -283,6 +283,7 @@ sub {
     width:80%;
     text-align:left;
     padding-left:32px;
+    margin: 0%;
   }
 
   #topnav li a {
