@@ -258,7 +258,7 @@ sub {
 
 @media screen and (max-width:1200px) {
   body, .dropdown-btn, .main {font-size: 18px}
-  .sidenav {width:320px;} .sidenav_b {width:160px;} .sidenav_c {width:160px; margin-left: 160px;} #topnav li a {padding:16px 0px; 0px 0px}
+  .sidenav, .sidenav_b {width:320px;} #topnav li a {padding:16px 0px; 0px 0px}
   .main {margin-left: 314px;}
   .sidenav_c a {font-size: 40px;}
   .thumbnail:hover span {width: 220px; left:64px; font-size:16px} .sidenav .thumbnail:hover span {top:5px; left: -140px;}
