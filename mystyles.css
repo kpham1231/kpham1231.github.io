@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
+html, body, .sidenav
+{
+    height: 100%;
+}
 
 body {
   font-family: 'Arial', sans-serif;
@@ -50,11 +54,11 @@ a:hover {color: blue; cursor: pointer;}
 .sidenav {
   font-size: 24px;
   float:left;
-  z-index:-200;
+  z-index:0;
   position: fixed;
 }
 
-.sidenav_b, .sidenav_c {
+.sidenav_b {
   height: 75px;
   line-height: 75px;
   width: 400px;
@@ -69,8 +73,13 @@ a:hover {color: blue; cursor: pointer;}
 }
 
 .sidenav_c {
-  margin-left: 200px;
-  border-left: 2px solid black;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -100;
+  width: 400px;
+  border-right: 2px solid black;
 }
 
 
@@ -80,8 +89,6 @@ a:hover {color: blue; cursor: pointer;}
   margin: 48px 32px 0px 394px;
   padding-left: 50px;
   padding-top: 32px;
-  border-left: 2px solid black;
-  height: 100%;
 }
 
 .main hr.full {margin-left: -50px; margin-right: -40px;}
@@ -181,7 +188,7 @@ sub {
 .sidenav .thumbnail:hover span {
   transform: rotate(90deg);
   top:50px;
-  left: -180px;
+  left: -175px;
 }
 
 .thumbnail:hover span img {
@@ -326,3 +333,4 @@ sub {
   .dark-mode .thumbnail:hover {color: white; cursor: auto;}
 
 }
+  
