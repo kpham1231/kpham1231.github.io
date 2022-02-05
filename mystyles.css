@@ -1,65 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Grenze:wght@200;300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
-
 html, body, .sidenav
 {
     height: 100%;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.25;
+  font-family: 'Times New Roman';
+  line-height: 1.75;
   font-size: 24px;
   font-weight: 200;
   background-color: white;
 }
 
-.projbody {font-family: 'Nanum Myeongjo', serif; font-weight:300; font-size:18px; line-height: 1.25;}
+a {color: black; text-decoration: underline; text-underline-offset: 0.25em;}
+a:hover {color: grey; cursor: pointer;}
 
-a {color: black; text-decoration: underline;}
-a:hover {color: blue; cursor: pointer;}
+.grid {
+  display: grid;
+  grid-template-columns: 360px 360px;
+  position: fixed;
+}
+
+.c1 {
+  grid-column: 1 / 2;
+  text-align: left;
+}
+
+.c2 {
+  grid-column: 2 / 2;
+  text-align: left;
+}
 
 
 #topnav {
   position: fixed;
   background-color: white;
-  height: 75px;
-  top: 0;
+  height: 48px;
+  bottom: 0;
   left: 0;
   width: 100%;
-  margin: 0;
-  padding: 0px;
-  list-style: none;
-  border-bottom: 2px solid black;
-  z-index: 2;
-  text-align: center;
+  margin: 0px;
+  padding: 8px 0px 8px 0px;
+  border-top: 1px solid black;
+  z-index: 200;
+  font-size: 24px;
 }
-
-#topnav li {
-  display: inline;
-  width: 25%;
-  text-align: center;
-  padding: none;
-  margin: 7%;
-}
-
-#topnav li a {
-  padding: 16px 0px;
-  display: inline-block;
-}
-
-#topnav li a span {color: blue;}
 
 .sidenav {
   font-size: 24px;
-  float:left;
+  float:right;
   z-index:0;
   position: fixed;
+  margin-top: 48px;
 }
 
 .sidenav_b {
-  height: 75px;
+  height: 60px;
   line-height: 75px;
   width: 400px;
   position: fixed;
@@ -69,26 +64,27 @@ a:hover {color: blue; cursor: pointer;}
   overflow-x: hidden;
   display: inline-block;
   text-align: center;
-  border-top: 2px solid black;
+  border-top: 1px solid black;
 }
 
 .sidenav_c {
   height: 100%;
   position: fixed;
   bottom: 0;
-  left: 0;
+  right: 0;
   z-index: -100;
   width: 400px;
-  border-right: 2px solid black;
+  border-left: 1px solid black;
 }
 
-
-
 .main {
-  float:left;
-  margin: 48px 32px 0px 394px;
-  padding-left: 50px;
-  padding-top: 32px;
+  font-family: 'Times New Roman', serif;
+  display: block;
+  width: 700px;
+  margin: 0 auto;
+  justify-content: center;
+  padding-top: 2.5%;
+  position: relative;
 }
 
 .main hr.full {margin-left: -50px; margin-right: -40px;}
@@ -97,51 +93,66 @@ a:hover {color: blue; cursor: pointer;}
 
 .main img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 sup, sub {
   vertical-align: baseline;
   position: relative;
-  top: -0.5em;
-  left: .05em;
+  top: -0.7em;
+  left: .03em;
   font-size: 70%;
-  text-decoration:none;
+  text-decoration: none;
 }
 sub { 
   top: 0.4em; 
 }
 
+/*----------------------------------------------------------------------------------------------------*/
+
+.scroll {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.scroll span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 1200s linear infinite;
+}
+
+/*.second span {animation-delay: 800s;}*/
+
+@keyframes scroll {
+  0% {transform: translate(0, 0);}
+  100% {transform: translate(-100%, 0);}
+}
 
 /*----------------------------------------------------------------------------------------------------*/
 
 .thumbnail {
+  position: relative;
   font-family: 'Arial', sans-serif;
-  line-height: 1.25;
-  font-size: 12px;
-  font-weight: 200;
-  color: blue;
-  background-color: rgba(0, 0, 255, .1);
-  border: white;
-  padding: 0px;
-  display: inline;
-  outline:none;
   text-decoration: none;
-  display: relative;
-  border-radius: 25px;
-  padding: 1px 5px 1px 5px;
+  border: white;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  background: none;
+  color: black;
 }
 
-.thumbnail:hover{
+.thumbnail:hover {
   text-decoration: none;
   cursor: help;
+  color: grey;
 }
 
-.thumbnail:hover span li a {color: blue;}
+.thumbnail:hover span li a {color: grey;}
 
 /*This hide the image that is in the span*/
-.thumbnail span{ 
+.thumbnail span { 
   position: fixed;
   visibility: hidden;
   color: black;
@@ -149,7 +160,7 @@ sub {
 }
 
 /*This is for the hidden images, to resize*/
-.thumbnail span img{ /*CSS for enlarged image*/
+.thumbnail span img {/*CSS for enlarged image*/
   border-width: 0;
   width: 100%;
   height: auto;
@@ -157,181 +168,45 @@ sub {
 
 /*When mouse over, the hidden image apear*/
 .thumbnail:hover span {
-  display: block; 
-  position:fixed;
+  color: black;
+  position: fixed;
+  display: inline-block; 
   visibility: visible;
-  width:300px;
-  z-index: 200;
-  left:70px;
-  top:96px;
+  width: 360px;
+  z-index: 100;
+  position: fixed;
+  left:50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 40%;
+  float: center;
 
-  color: blue;
-  font-size: 18px;
   font-family: 'Arial', sans-serif;
   font-weight: 300;
-  line-height: 1.1;
   text-align: left;
+  letter-spacing: 0;
+  font-size: 20px;
 }
 
-.sidenav .thumbnail {
-  font-size: 18px;
-  float:left;
-  margin: 136px 394px 0px -56px;
-  z-index:-200;
-  position: fixed;
-  transform: rotate(-90deg);
-  color: white;
-  background-color: blue;
+p.times {font-family: Times new roman; margin-top: 4px; line-height: 1.3; font-size:21px;}
+
+.main .thumbnail {
+  float: center;
   border-radius: 0px;
+  background: none;
 }
 
-.sidenav .thumbnail:hover span {
-  transform: rotate(90deg);
-  top:50px;
-  left: -175px;
+.main .thumbnail:hover span {
+  position: fixed;
+  left:50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .thumbnail:hover span img {
   width:100%;
-  box-shadow: 0px 10px 20px 0px rgba(0, 0, 255, 0.6);
+  /*box-shadow: 0px 5px 10px 0px #b8babf;*/
+  margin-top: 12px;
 }
-
-.projbody .thumbnail {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 10px;
-}
-
-/*----------------------------------------------------------------------------------------------------*/
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: white;
-  border: 1px solid blue;
-  text-align: center;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-  left: 50%;
-  margin-left: -60px;
-  font-size:16px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent blue transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
-/*----------------------------------------------------------------------------------------------------*/
-
-.dark-mode, .dark-mode a, .dark-mode .button {background-color: black; color: white;}
-
-.dark-mode #topnav {background-color: black; color: white; border-bottom: 2px solid white}
-
-.dark-mode .main {border-left: 2px solid white;}
-
-.dark-mode .thumbnail {color:white; background-color: rgba(35, 254, 30, .25);}
-
-.dark-mode .sidenav, .dark-mode #topnav li a span, .dark-mode .thumbnail, .dark-mode .thumbnail:hover, .dark-mode .thumbnail:hover span, .dark-mode .thumbnail:hover span li a, .dark-mode a:hover, .button:hover {color: #23FE1E;}
-
-.dark-mode .sidenav .thumbnail {color: black; background-color: #23FE1E}
-
-.dark-mode .sidenav_b {border-right: 2px solid white; border-top: 2px solid white;}
-
-.dark-mode .sidenav_c {border-left: 2px solid white; border-top: 2px solid white;}
-
-.dark-mode .thumbnail:hover span img {box-shadow: 0px 10px 20px 0px rgba(35, 254, 30, 0.6);}
-
-.button {display: inline; cursor: help;}
-
-/*----------------------------------------------------------------------------------------------------*/
-
-@media screen and (max-width:1200px) {
-  body, .dropdown-btn, .main {font-size: 18px}
-  .sidenav, .sidenav_b, .sidenav_c {width:320px;} #topnav li a {padding:16px 0px; 0px 0px}
-  .main {margin-left: 314px;}
-  .sidenav_c a {font-size: 40px;}
-  .thumbnail:hover span {width: 220px; left:64px; font-size:16px} .sidenav .thumbnail:hover span {top:5px; left: -140px;}
-}
-
-@media screen and (max-width:880px) {
-  #topnav {
-    border-bottom: 0px;
-    height: 100%;
-    width: 320px;
-    height: auto;
-    top: 0;
-    left: 0;
-    position: relative;
-    border-right: none;
-    overflow-x: visible;
-    padding-top: 0px;
-    padding-bottom: 6px}
-
-  #topnav li {
-    float: left;
-    width:80%;
-    text-align:left;
-    padding-left:32px;
-    margin: 0%;
-  }
-
-  #topnav li a {
-    display: block;
-    padding: 6px 0px;
-  }
-   
-  .sidenav, .sidenav .thumbnail {display: none;}
-
-  .sidenav_b, .sidenav_c {
-    line-height: normal;
-    width: 100%;
-    height: auto;
-    position: relative;
-    text-align: left;
-    border-top: none;
-    border-right: none;}
-
-  .sidenav_b {padding: 24px 0px 10px 32px;}
-  .sidenav_c {margin: 0; border-left: none; padding: 8px 0px 48px 32px;} 
-  .sidenav_b a, .sidenav_c a {padding: 5px 10px; border: 1px solid black;}
-  .sidenav_b a:hover, .sidenav_c a:hover {border: 1px solid blue;}
-  
-  .main {
-    margin: 0px 32px;
-    padding: 16px 0px;
-    border-left: none;
-    border-top: 1px solid black;
-  }
-
-  .main hr {display: none;}
-
-  .thumbnail {text-decoration: none; cursor: auto}
-  .thumbnail:hover span, .thumbnail:hover span img {display: none; cursor: auto;}
-
-  .dark-mode #topnav {border-bottom: none}
-  .dark-mode .main {border-left: none; border-top: 1px solid white;}
-  .dark-mode .sidenav_b, .dark-mode .sidenav_c {border-top: none; border-left: none;}
-  .dark-mode .sidenav_b a, .dark-mode .sidenav_c a {padding: 5px 10px; border: 1px solid white;}
-  .dark-mode .sidenav_b a:hover, .dark-mode .sidenav_c a:hover {border: 1px solid #23FE1E;}
-  .dark-mode .thumbnail:hover {color: white; cursor: auto;}
-
-}
-   
